@@ -7,6 +7,9 @@ public class Cine{
         this.nombre = nombre;
         this.aforo = aforo;
         this.salas = new Sala[numSala];
+        for (int i = 0; i < numSala; i++) {
+            this.salas[i] = new Sala(i + 1);
+        }
 
     }
 }
