@@ -37,4 +37,11 @@ public class Cine{
     public void setContadorPersonas(int contadorPersonas) {
         this.contadorPersonas = contadorPersonas;
     }
+
+    public void verTodas() {
+        System.out.println("CARTELERA");
+        for (int i = 0; i < salas.length;i++) {
+            System.out.println("sala " + salas[i].getNumero() + ": " + salas[i].getPelicula().getTitulo() + " " + salas[i].getPelicula().getDuracion() + " min");
+        }
+    }
 }
