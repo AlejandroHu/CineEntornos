@@ -38,4 +38,17 @@ public class Sala {
             System.out.println();
         }
     }
+    public void reservarButacas(int fila,int columna,String email) {
+        if ((fila >= 0 && fila < butacas.length) && (columna >= 0 && columna < butacas[0].length)) {
+            System.out.println("Sala: " + numero);
+            if (butacas[fila][columna]==null) {
+                butacas[fila][columna]=email;
+                System.out.println("Reserva realizada en la sala: " + numero);
+            }else {
+                System.out.println("Butaca ocupada por: " + butacas[fila][columna]);
+            }
+        }else {
+            System.out.println("Asientos fuera de rango");
+        }
+    }
 }
