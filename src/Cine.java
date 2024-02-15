@@ -44,4 +44,13 @@ public class Cine{
             System.out.println("sala " + salas[i].getNumero() + ": " + salas[i].getPelicula().getTitulo() + " " + salas[i].getPelicula().getDuracion() + " min");
         }
     }
+
+    public void verSalas(int numSalas) {
+        if (numSalas > 0 && numSalas <= salas.length) {
+            numSalas = numSalas - 1;
+            salas[numSalas].infoSala();
+        }else {
+            System.out.println("numero de sala invalida");
+        }
+    }
 }
