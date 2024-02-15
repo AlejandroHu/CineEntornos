@@ -53,4 +53,26 @@ public class Cine{
             System.out.println("numero de sala invalida");
         }
     }
+
+    public void comprarEntrada(int numSalas, int fila, int columna, String email) {
+        if (contadorPersonas < aforo) {
+
+            if (!email.isEmpty()) {
+                if (numSalas > 0 && numSalas <= salas.length) {
+                    numSalas = numSalas - 1;
+                    fila = fila - 1;
+                    columna = columna - 1;
+                    contadorPersonas++;
+                    salas[numSalas].reservarButacas(fila, columna, email);
+                }else {
+                    System.out.println("numero de sala invalida");
+                }
+            }else {
+                System.out.println("Has dejado el email vacio");
+            }
+
+        }else {
+            System.out.println("AFORO COMPLETO");
+        }
+    }
 }
