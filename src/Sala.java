@@ -24,4 +24,18 @@ public class Sala {
     public void setButacas(String[][] butacas) {
         this.butacas = butacas;
     }
+    public void infoSala() {
+
+        System.out.println("Sala: " + numero + ": " + pelicula.getTitulo());
+        for (int i = 0; i < butacas.length;i++) {
+            for (int j = 0; j < butacas[i].length;j++) {
+                if (butacas[i][j]!=null) {
+                    System.out.print("[X] ");
+                }else {
+                    System.out.print("[] ");
+                }
+            }
+            System.out.println();
+        }
+    }
 }
