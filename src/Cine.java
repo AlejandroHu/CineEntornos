@@ -82,11 +82,13 @@ public class Cine{
         return salas;
     }
 
+    /**
+     * Obtiene el contador de personas que hay dentro del cine
+     * @return contador de personas del cine
+     */
+
     public int getContadorPersonas() {
         return contadorPersonas;
-    }
-    public void setContadorPersonas(int contadorPersonas) {
-        this.contadorPersonas = contadorPersonas;
     }
 
     public void verTodas() {
