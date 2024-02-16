@@ -1,8 +1,37 @@
+/**
+ * La clase Cine representa un cine con un nombre, un aforo máximo, un conjunto de salas y un contador
+ * de personas presentes en el cine.
+ * Esta clase proporciona métodos para acceder y modificar el nombre del cine, el aforo, la lista de salas,
+ * el contador de personas, ver la cartelera, ver información de una sala específica, y comprar entradas.
+ *
+ * @author AlejandroHu
+ */
 public class Cine{
+    /**
+     * Es el nombre del cine, se representa con un String
+     */
     private String nombre;
+    /**
+     * Aforo maximo del cine, se representa con un int
+     */
     private int aforo;
+    /**
+     * Es el conjunto de salas que hay en el cine, es un array de la clase Sala llamada salas
+     */
     private Sala[]salas;
+    /**
+     * Es el contador de personas que hay en el cine, se representa con un int
+     */
     private int contadorPersonas;
+
+    /**
+     * Construye una nueva instancia de la clase Cine con el nombre del cine, el aforo máximo y el número
+     * de salas especificado. Se inicializan las salas con sus respectivos números utilizando un bucle for.
+     *
+     * @param nombre Nombre del cine.
+     * @param aforo Aforo máximo del cine.
+     * @param numSala Número de salas en el cine, numero variable.
+     */
     public Cine(String nombre, int aforo, int numSala) {
         this.nombre = nombre;
         this.aforo = aforo;
@@ -12,23 +41,45 @@ public class Cine{
         }
 
     }
+
+    /**
+     * Obtienes el nombre del cine, representado con un String
+     * @return El nombre del cine
+     */
     public String getNombre() {
         return nombre;
     }
+
+    /**
+     * Establece el nombre del cine, es un String
+     * @param nombre Nuevo nombre del cine, es un String, no dejar el campo en blanco
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    /**
+     * Obtiene el aforo máximo del cine, es un int
+     * @return El aforo maximo del cine
+     */
     public int getAforo() {
         return aforo;
     }
+
+    /**
+     * Establece el aforo maximo que puede tener el cine, es un int
+     * @param aforo Nuevo aforo maximo del cine, tiene que ser un valor mayor a 0 y menor a MAX_AFORO
+     */
     public void setAforo(int aforo) {
         this.aforo = aforo;
     }
+
+    /**
+     * Obtiene la lista de salas del cine, array de la clase Sala
+     * @return la lista de salas del cine
+     */
     public Sala[] getSalas() {
         return salas;
-    }
-    public void setSalas(Sala[] salas) {
-        this.salas = salas;
     }
 
     public int getContadorPersonas() {
