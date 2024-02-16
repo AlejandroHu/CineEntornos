@@ -92,12 +92,26 @@ public class Cine{
         return contadorPersonas;
     }
 
+    /**
+     * Muestra la cartelera del cine, indicando el número de salas, el título de las películas y sus duraciones.
+     * un bucle del array salas que imprime todas las salas, cada sala con su numero y las peliculas y titulos de
+     * cada sala, llamando a las diferentes clases
+     */
+
     public void verTodas() {
         System.out.println("CARTELERA");
         for (int i = 0; i < salas.length;i++) {
             System.out.println("sala " + salas[i].getNumero() + ": " + salas[i].getPelicula().getTitulo() + " " + salas[i].getPelicula().getDuracion() + " min");
         }
     }
+
+    /**
+     * Muestra la información de una sala específica del cine, pidiendo el numero de sala que quieras, mostrandonos
+     * los datos de la sala, con sus butacas ocupadas y libres, llamando a la clase Sala, utilizando el metodo de la
+     * clase Sala, infoSala
+     * @param numSalas es el numero de sala (id) que quieras ver, tiene que ser mayor que 0 y menor o igual que
+     *                 longitud del array salas, sino se cumple te dara un mensaje de error
+     */
 
     public void verSalas(int numSalas) {
         if (numSalas > 0 && numSalas <= salas.length) {
@@ -107,6 +121,27 @@ public class Cine{
             System.out.println("numero de sala invalida");
         }
     }
+
+    /**
+     * Permite comprar una entrada para una sala específica del cine, indicando la fila, la columna,
+     * el correo electrónico del cliente y realiza la reserva de la butaca.
+     * Si el contador de personas es mayor al aforo maximo dara un error de aforo completo, sino continua
+     * si el email no esta vacio y si numero de sala (id) es mayor a 0 y menor o igual a la longitud de array
+     * salas, le restamos 1 a numSalas, fila y columna para que el usuario introduzca a partir del 1,
+     * incrementamos el contadorPersona y en el array salas colocamos el numSala que se ha introducido y llamamos
+     * a la clase Sala y su funcion reservarButacas
+     *
+     * @param numSalas Número de la sala en la que se realizará la compra, tiene que ser mayor que 0 y menor o
+     *                 igual a la longitud del array salas sino nos dara un error de numero de sala invalida
+     * @param fila Fila de la butaca a reservar, tiene que ser mayor igual a 0 y que sea menor que la
+     *             longitud de la matriz de la clase Sala, ya que sino te dara error, condiciones
+     *             realizadas en la clase Sala
+     * @param columna Columna de la butaca a reservar, tiene que ser mayor igual a 0 y que sea menor que la
+     *                longitud una fila de la matriz de la clase Sala, ya que sino te dara error, condiciones
+     *                realizadas en la clase Sala
+     * @param email Correo electrónico del cliente que realiza la compra, tienes que introducir un valor ya que
+     *              si introduces un valor vacio te saltara el error de email vacio
+     */
 
     public void comprarEntrada(int numSalas, int fila, int columna, String email) {
         if (contadorPersonas < aforo) {
