@@ -27,7 +27,6 @@ public class Sala {
     public String[][] getButacas() {
         return butacas;
     }
-    public void setButacas(String[][] butacas) {this.butacas = butacas;}
     public void infoSala() {
 
         System.out.println("Sala: " + numero + ": " + pelicula.getTitulo());
