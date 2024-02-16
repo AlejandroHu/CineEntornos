@@ -20,6 +20,43 @@ public class Main {
         int columna;
         String email;
         boolean continuar = true;
+        while(continuar == true) {
+            System.out.println("Selecciona una opcion:\n"
+                    + "1. Ver cartelera\n"
+                    + "2. Ver Sala\n"
+                    + "3. Comprar entradas\n"
+                    + "4. Salir"
+            );
+            int opcion = entrada.nextInt();
+            switch(opcion) {
+                case 1:
+                    cine.verTodas();
+                    break;
+                case 2:
+                    System.out.println("Introduce numero de sala: ");
+                    numSalas = entrada.nextInt();
+                    cine.verSalas(numSalas);
+                    break;
+                case 3:
+                    System.out.println("Introduce numero de sala: ");
+                    numSalas = entrada.nextInt();
+                    System.out.println("Introduce la fila: ");
+                    fila = entrada.nextInt();
+                    System.out.println("Introduce la columna: ");
+                    columna = entrada.nextInt();
+                    entrada.nextLine();
+                    System.out.println("Introduce el correo electronico: ");
+                    email = entrada.nextLine();
+                    cine.comprarEntrada(numSalas, fila, columna, email);
+                    break;
+                case 4:
+                    System.out.println("Saliendo");
+                    continuar = false;
+                    break;
+                default:
+                    System.out.println("Opcion no valida");
+            }
+        }
 
     }
 }
