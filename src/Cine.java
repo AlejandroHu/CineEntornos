@@ -20,9 +20,10 @@ public class Cine{
      */
     private Sala[]salas;
     /**
-     * Es el contador de personas que hay en el cine, se representa con un int
+     * Es el contador de personas que hay en el cine, se representa con un int y tiene valor 0 ya que es un
+     * contador
      */
-    private int contadorPersonas;
+    private int contadorPersonas = 0;
 
     /**
      * Construye una nueva instancia de la clase Cine con el nombre del cine, el aforo máximo y el número
